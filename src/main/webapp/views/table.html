@@ -1,0 +1,37 @@
+<h3>List of books</h3>
+<table>
+<tr ng-repeat="item in list">
+    <td><a href="/#/{{item.id}}">{{item.title}}</a></td>
+    <td>{{item.author}}</td>
+    <td><button ng-click="delete(item.id)">Delete</button></td>
+</tr>
+</table>
+
+<h3>New book</h3>
+<div>
+<!--     <div>
+        <label for="id">id</label>
+        <input id="id" ng-model="form.id"/>
+    </div> -->
+<table>
+	<tr>
+        <td><label for="title">Title</label></td>
+        <td><input id="title" ng-model="form.title"/></td>
+    </tr>
+    <tr>
+        <td><label for="author">Author</label></td>
+        <td><input id="author" ng-model="form.author"/></td>
+    </tr>
+    <tr>
+        <td><label for="gender">Gender</label></td>
+        <td><input id="gender" ng-model="form.gender"/></td>
+    </tr>
+    <tr>
+        <td><label for="publicationDate">Publication date</label></td>
+        <td><input id="publicationDate" ng-model="form.publicationDate"/></td>
+    </tr>
+    <tr>
+   		<td colspan="2"><button ng-click="save()">Save</button></td>
+    </tr>
+</table>
+</div>
